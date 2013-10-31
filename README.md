@@ -27,15 +27,15 @@ For each button you want to apply the method to, create a new instance specifyin
 For better control over your fast buttons you could create a function which
 creates a new fast button instance like so:
 
-  Object.prototype.makeFastButton = function(handler){
+    Object.prototype.makeFastButton = function(handler){
 
-    if(typeof FastButton !== 'function'){
-      return console.error('Google fastbutton class not found');
-    }
+      if(typeof FastButton !== 'function'){
+        return console.error('Google fastbutton class not found');
+      }
 
-    new FastButton(this, handler);
+      new FastButton(this, handler);
 
-  };
+    };
 
 This way you have better control over what happens when creating new fast buttons without having to 
 touch the google-fastbutton javascript file.
