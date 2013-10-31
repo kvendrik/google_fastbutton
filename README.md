@@ -38,6 +38,6 @@ creates a new fast button instance like so:
   };
 
 This way you have better control over what happens when creating new fast buttons without having to 
-touch the google-fastbutton.js file.
+touch the google-fastbutton javascript file.
 
 
