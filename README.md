@@ -5,7 +5,7 @@ When clicking a element that triggers javascript on a mobile device they wait 30
 see if the user is going to preform a dubble tap (zooming in). Google fastbutton is a method to avoid 
 this 300ms delay.
 
-google-fastbutton.js is basicly the [google fastbutton](https://developers.google.com/mobile/articles/fast_buttons) class ready-to-use.
+google-fastbutton.js is basicly the [google fastbutton](https://developers.google.com/mobile/articles/fast_buttons) javascript ready-to-use.
 
 
 Basic usage
@@ -30,7 +30,7 @@ creates a new fast button instance like so:
     Object.prototype.makeFastButton = function(handler){
 
       if(typeof FastButton !== 'function'){
-        return console.error('Google fastbutton class not found');
+        return console.error('Google fastbutton function not found');
       }
 
       new FastButton(this, handler);
