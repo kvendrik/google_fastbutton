@@ -24,7 +24,7 @@ For each button you want to apply the method to, create a new instance specifyin
 
 ######Little tip
 
-For better control over your fast buttons you could create a function which
+For better control over your fast buttons you could create a function that
 creates a new fast button instance like so:
 
     Object.prototype.makeFastButton = function(handler){
