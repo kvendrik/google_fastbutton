@@ -5,7 +5,7 @@ When clicking a element that triggers javascript on a mobile device they wait 30
 see if the user is going to preform a dubble tap (zooming in). Google fastbutton is a method to avoid 
 this 300ms delay.
 
-This javascript file is basicly the [google fastbutton](https://developers.google.com/mobile/articles/fast_buttons) class ready for use.
+google-fastbutton.js is basicly the [google fastbutton](https://developers.google.com/mobile/articles/fast_buttons) class ready-to-use.
 
 
 Basic usage
