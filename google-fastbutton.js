@@ -21,6 +21,7 @@
 
     this.FastButton.prototype.onTouchStart = function(e){
 
+      e.preventDefault();
       e.stopPropagation();
 
       this.element.addEventListener('touchend', this, false);
@@ -39,7 +40,10 @@
     };
 
     this.FastButton.prototype.onClick = function(e){
+
+      e.preventDefault();
       e.stopPropagation();
+      
       this.reset();
       this.handler(e);
 
