@@ -5,8 +5,15 @@
       this.element = element;
       this.handler = handler;
 
-      element.addEventListener('touchstart', this, false);
-      element.addEventListener('click', this, false);
+      if(navigator.userAgent && navigator.userAgent.toLowerCase().indexOf('mobile') !== -1){
+
+        element.addEventListener('touchstart', this, false);
+
+      } else {
+      
+        element.addEventListener('click', this, false);
+
+      }
 
     };
 
