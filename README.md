@@ -1,43 +1,20 @@
 Google Fastbutton
 =================
 
-When clicking a element that triggers javascript on a mobile device they wait 300ms to 
-see if the user is going to preform a dubble tap (zooming in). Google fastbutton is a method to avoid 
-this 300ms delay.
+When clicking an element that triggers JavaScript on a mobile device there is a 300ms delay to see if the you are going to preform a double tap (zooming in). Google Fastbutton is a method to avoid this 300ms delay.
 
-google-fastbutton.js is basicly the [google fastbutton](https://developers.google.com/mobile/articles/fast_buttons) javascript ready-to-use.
+google-fastbutton.js is basicly the [google fastbutton](https://developers.google.com/mobile/articles/fast_buttons) library ready-to-use.
 
+## Basic usage
 
-Basic usage
-===========
+To start creating fast buttons, first import the required JavaScript.
 
-To start creating fast buttons, first import the javascript.
+    <script src='js/google-fastbutton-min.js'></script>
 
-	<script src='js/google-fastbutton-min.js'></script>
-
-For each button you want to apply the method to, create a new instance specifying the button element and the handler
+For each button you want to apply the method to, create a new instance specifying the HTML element and the handler function.
 
 	new FastButton(document.getElementById('fast_button'), function(){
-		alert('works');
+		console.log('works');
 	});
-
-
-######Little tip
-
-For better control over your fast buttons you could create a function that
-creates a new fast button instance like so:
-
-    Object.prototype.makeFastButton = function(handler){
-
-      if(typeof FastButton !== 'function'){
-        return console.error('Google fastbutton function not found');
-      }
-
-      new FastButton(this, handler);
-
-    };
-
-This way you have better control over what happens when creating new fast buttons without having to 
-touch the google-fastbutton javascript file.
 
 

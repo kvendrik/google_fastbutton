@@ -5,7 +5,7 @@
       this.element = element;
       this.handler = handler;
 
-      if(navigator.userAgent && navigator.userAgent.toLowerCase().indexOf('mobile') !== -1){
+      if("ontouchstart" in window){
 
         element.addEventListener('touchstart', this, false);
 
@@ -50,9 +50,20 @@
       e.stopPropagation();
       
       this.reset();
-      this.handler(e);
 
-      if(e.type == 'touchend'){
+      var handler = this.handler;
+
+      if(typeof handler === 'function'){
+
+        handler(e);
+
+      } else if(typeof handler === 'object'){
+
+        handler.handleEvent(e);
+      
+      }
+
+      if(e.type === 'touchend'){
         this.clickbuster.preventGhostClick(this.startX, this.startY);
       }
 
